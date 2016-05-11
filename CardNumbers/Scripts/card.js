@@ -9,8 +9,18 @@
         if (isValid) {
             if (numbers[0] == '3') {
                 if (numbers[1] == '5') {
-                    alert("Your vendor is JSB");
-                    return;
+                    debugger;
+                    var firstNumbers = numbers[0] + numbers[1] + numbers[2]+numbers[3];
+
+                    if (firstNumbers => 3528 && firstNumbers <= 3589) {
+                        alert("Your vendor is JSB");
+                        return;
+                    }
+                    else {
+                        alert('Your vendo is Undefine');
+                        return;
+                    }
+                    
                 }
                 else {
                     var firstNumbers = numbers[0] + numbers[1];
