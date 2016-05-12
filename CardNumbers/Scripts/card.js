@@ -77,6 +77,74 @@
         }
     });
 
+    $('#btn-genNext').click(function () {
+        debugger;
+        var number;
+        number = $('#genNext').val();
+        var numbers = number.replace(/ /g, '').split('');
+        var isValid = isValidFunc(numbers);
+
+        if (isValid) {
+            if (numbers[0] == '3') {
+                if (numbers[1] == '5') {
+                    debugger;
+                    var firstNumbers = numbers[0] + numbers[1] + numbers[2] + numbers[3];
+
+                    if (firstNumbers => 3528 && firstNumbers <= 3589) {
+                        $("#jcb").prop("checked", true);
+                        return;
+                    }
+                    else {
+                        $("#jcb").prop("checked", true);
+                        alert('Your vendo is Undefine. Program will generate random JSB card');
+                        return;
+                    }
+
+                }
+                else {
+                    var firstNumbers = numbers[0] + numbers[1];
+                    if (firstNumbers == '34' || firstNumbers == '37') {
+                        $("#AMEX").prop("checked", true);
+                        return;
+                    }
+                    else {
+                        $("#AMEX").prop("checked", true);
+                        alert("Your vendor is Undefine. Program will generate random American Express card");
+                        return;
+                    }
+
+                }
+
+            }
+
+            if (numbers[0] == '4') {
+                $("#visa").prop("checked", true);
+                return;
+            }
+
+            if (numbers[0] == '5') {
+
+                var firstNumbers = numbers[0] + numbers[1];
+
+                if (firstNumbers > 50 && firstNumbers < 56) {
+                    $("#master").prop("checked", true);
+                    return;
+                }
+                else {
+                    $("#maestro").prop("checked", true);
+                    return;
+                }
+            }
+
+            if (numbers[0] == '6') {
+                $("#maestro").prop("checked", true);
+                return;
+            }
+            $("#AMEX").prop("checked", true);
+            alert("Your vendor is Undefine. Program will generate random American Express card");
+        }
+    });
+
 
 
 

@@ -31,26 +31,23 @@
 
             <form class="form-horizontal">
                 <fieldset>
-                    <legend>Generate new card number</legend>
+                    <legend>Generate next card number</legend>
                     <div class="form-group">
-                        <input class="col-sm-offset-1" type="radio" name="vendor" id="AMEX" value="AMEX" checked />
-                        <label for="AMEX" class="control-label">American Express</label>
+                        <label for="genNext" class="col-sm-2 control-label">Your number: </label>
+                        <input id="genNext" type="text" value="@ViewBag.Number" />
+                        <input class="btn btn-primary col-sm-offset-2" type="submit" id="btn-genNext" value="Generate next" />
 
-                        <input type="radio" name="vendor" id="maestro" value="Maestro" />
-                        <label for="maestro" class="control-label">Maestro</label>
+                        <input class="hide" type="radio" name="vendor" id="AMEX" value="AMEX" />
 
-                        <input type="radio" name="vendor" id="master" value="Master" />
-                        <label for="master" class="control-label">Master Card</label>
+                        <input class="hide" type="radio" name="vendor" id="maestro" value="Maestro" />
 
-                        <input type="radio" name="vendor" id="visa" value="VISA" />
-                        <label for="visa" class="control-label">VISA</label>
+                        <input class="hide" type="radio" name="vendor" id="master" value="Master" />
 
-                        <input type="radio" name="vendor" id="jcb" value="JCB" />
-                        <label for="jcb" class="control-label">JCB</label>
+                        <input class="hide" type="radio" name="vendor" id="visa" value="VISA" />
 
-                        <label for="genNew" class="col-sm-2 control-label">Vendors: </label>
-                        <input class="col-sm-offset-2" id="genNew" type="text" value="@ViewBag.Number" />
-                        <input class="btn btn-primary col-sm-offset-2" type="submit" id="btn-genNew" value="Generate" />
+                        <input class="hide" type="radio" name="vendor" id="jcb" value="JCB" />
+
+                        
                     </div>
                 </fieldset>
 
